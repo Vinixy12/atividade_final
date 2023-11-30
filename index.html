@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade Final</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+    #resizable {
+      width: 150px;
+      height: 150px;
+      padding: 0.5em;
+    }
+
+    #resizable h3 {
+      text-align: center;
+      margin: 0;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+    $(function () {
+      $("#resizable").resizable();
+    });
+  </script>
+
+  <script src="script.js" defer></script>
+
+  <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+  <script>
+    const changeThemeToDark = () => {
+      document.documentElement.setAttribute("data-theme", "dark");
+      localStorage.setItem("data-theme", "dark");
+    }
+
+    const changeThemeToLight = () => {
+      document.documentElement.setAttribute("data-theme", "light");
+      localStorage.setItem("data-theme", 'light');
+    }
+    let theme = localStorage.getItem('data-theme');
+    if (theme == 'dark') changeThemeToDark();
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <div id="titulo">
+      <h1>Atividade Final!</h1>
+    </div>
+    <div id="posicao">
+      <i class="bi bi-circle-half" id="posicao-absoluta"></i>
+      <input type="checkbox" name="toggle-dark" id="toggle-dark">
+    </div>
+  </header>
+  <main>
+    <br>
+
+    <h2 style="font-weight: bold; text-align: center; font-size: 28px;">Indicadores de pH</h2>
+
+    <br><br><br>
+
+    <p style="font-weight: bold;">Alaranjado de Metila:</p>
+    <p>Cor em Meio Ácido: Vermelho.</p>
+    <p>Cor em Meio Básico: Amarelo.</p>
+    <p>Faixa de pH de Viragem: A faixa de viragem do alaranjado de metila é em torno de pH 3,1 a 4,4. Ele é
+      frequentemente usado em titulações ácido-base, onde a mudança de cor indica a transição entre o ácido e a base na
+      titulação.</p>
+
+      <figure class="figure">
+        <img src="imagens/alaranjado_de_metila.jpg" class="figure-img img-fluid" class="ui-widget-header">
+      </figure>
+
+    <br> <br> <br>
+
+    <p style="font-weight: bold;">Azul de Bromotimol:</p>
+    <p>Cor em Meio Ácido: Amarelo.</p>
+    <p>Cor em Meio Básico: Azul.</p>
+    <p>Faixa de pH de Viragem: A faixa de viragem do azul de bromotimol é de pH 6,0 a 7,6. Assim como o alaranjado de
+      metila, é frequentemente utilizado em titulações ácido-base para indicar o ponto em que a solução atinge a
+      neutralidade.</p>
+
+    <figure class="figure">
+      <img src="imagens/azul_de_bromotimol.jpg" class="figure-img img-fluid" class="ui-widget-header">
+    </figure>
+
+
+    <br> <br> <br>
+
+    <p style="font-weight: bold;">Fenolftaleína:</p>
+    <p>Cor em Meio Ácido: Incolor.</p>
+    <p>Cor em Meio Básico: Rosa a Vermelho.</p>
+    <p>Faixa de pH de Viragem: A fenolftaleína tem uma faixa de viragem de pH 8,2 a 10,0. Ela é comumente usada em
+      titulações ácido-base, onde a solução vai de incolor para rosa ou vermelho conforme a solução se torna básica.</p>
+
+    <figure class="figure">
+      <img src="imagens/fenolftaleína.jpg" class="figure-img img-fluid" class="ui-widget-header">
+    </figure>
+
+    <br> <br> <br>
+
+    <p>Esses indicadores de pH são valiosos em experimentos químicos para determinar a acidez ou basicidade de uma
+      solução. A escolha do indicador depende da faixa de pH da reação que está sendo monitorada.</p>
+
+    <figure class="figure">
+      <img src="imagens/ph.jpg" class="figure-img img-fluid" class="ui-widget-header">
+    </figure>
+
+</body>
+
+</html>
